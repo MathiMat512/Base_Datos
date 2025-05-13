@@ -25,9 +25,10 @@ DROP TABLE IF EXISTS `tb_categoria`;
 CREATE TABLE `tb_categoria` (
   `id_categoria` int NOT NULL AUTO_INCREMENT,
   `descripcion_categoria` varchar(200) DEFAULT NULL,
+  `estado_categoria` int DEFAULT NULL,
   PRIMARY KEY (`id_categoria`),
   UNIQUE KEY `id_categoria_UNIQUE` (`id_categoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +37,7 @@ CREATE TABLE `tb_categoria` (
 
 LOCK TABLES `tb_categoria` WRITE;
 /*!40000 ALTER TABLE `tb_categoria` DISABLE KEYS */;
-INSERT INTO `tb_categoria` VALUES (1,'Teclados'),(2,'Cables de video'),(3,'Mouses'),(4,'Otros');
+INSERT INTO `tb_categoria` VALUES (1,'Teclados',1),(2,'Cables de video',1),(3,'Mouses',1),(4,'Otros',1),(5,'Tintas para impresoras',0),(6,'Tintas',1);
 /*!40000 ALTER TABLE `tb_categoria` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-28  8:58:23
+-- Dump completed on 2025-05-13 17:22:00

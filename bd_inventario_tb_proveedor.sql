@@ -25,8 +25,9 @@ DROP TABLE IF EXISTS `tb_proveedor`;
 CREATE TABLE `tb_proveedor` (
   `id_proveedor` int NOT NULL AUTO_INCREMENT,
   `descripcion_proveedor` varchar(200) DEFAULT NULL,
+  `estado_proveedor` int DEFAULT NULL,
   PRIMARY KEY (`id_proveedor`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +36,7 @@ CREATE TABLE `tb_proveedor` (
 
 LOCK TABLES `tb_proveedor` WRITE;
 /*!40000 ALTER TABLE `tb_proveedor` DISABLE KEYS */;
-INSERT INTO `tb_proveedor` VALUES (1,'Sercoplus'),(2,'Impacto'),(3,'Otros...');
+INSERT INTO `tb_proveedor` VALUES (1,'Sercoplus',1),(2,'Impacto',1),(3,'Memory Kings',1),(4,'AliExpress',0),(5,'AliExpresss',NULL),(6,'AliExpress',NULL),(7,'AliExpress',1);
 /*!40000 ALTER TABLE `tb_proveedor` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-28  8:58:23
+-- Dump completed on 2025-05-13 17:22:00

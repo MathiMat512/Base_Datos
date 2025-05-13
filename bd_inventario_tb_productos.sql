@@ -33,6 +33,7 @@ CREATE TABLE `tb_productos` (
   `cod_proveedor` int DEFAULT NULL,
   `cod_area` int DEFAULT NULL,
   `id_categoria` int DEFAULT NULL,
+  `estado_producto` int DEFAULT NULL,
   PRIMARY KEY (`id_producto`),
   UNIQUE KEY `id_articulo_UNIQUE` (`id_producto`),
   KEY `cod_marca_idx` (`cod_marca`),
@@ -43,7 +44,7 @@ CREATE TABLE `tb_productos` (
   CONSTRAINT `cod_marca` FOREIGN KEY (`cod_marca`) REFERENCES `tb_marca` (`id_marca`),
   CONSTRAINT `cod_proveedor` FOREIGN KEY (`cod_proveedor`) REFERENCES `tb_proveedor` (`id_proveedor`),
   CONSTRAINT `id_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `tb_categoria` (`id_categoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -52,9 +53,57 @@ CREATE TABLE `tb_productos` (
 
 LOCK TABLES `tb_productos` WRITE;
 /*!40000 ALTER TABLE `tb_productos` DISABLE KEYS */;
-INSERT INTO `tb_productos` VALUES (1,'Mouse de Juanca','-','2023-09-15 00:00:00','2023-09-15 00:00:00',1,1,1,1,3),(2,'Teclado','-','2025-04-15 00:00:00','2025-04-16 00:00:00',1,2,2,2,1);
+INSERT INTO `tb_productos` VALUES (1,'Mouse de Juanca','-','2023-09-15 00:00:00','2023-09-15 00:00:00',1,1,1,1,3,1),(2,'Teclado','-','2025-04-15 00:00:00','2025-04-16 00:00:00',1,2,2,2,1,1),(3,'Cable Jamma','60 cm','2025-05-10 00:00:00','2025-05-13 00:00:00',1,3,2,1,2,1),(4,'Multiconector','20m',NULL,NULL,5,2,1,1,1,1),(5,'Cables USB entrada C','cables',NULL,NULL,7,2,2,1,4,1),(6,'Tinta rosa','60 gramos',NULL,NULL,1,1,1,1,5,0),(11,'Tinta negra','',NULL,NULL,1,5,2,1,6,0),(13,'Tinta negra','',NULL,NULL,1,1,1,1,6,0),(16,'Tinta negra','null',NULL,NULL,1,1,1,1,1,1),(17,'Tinta Amarilla','',NULL,NULL,1,5,3,4,6,0);
 /*!40000 ALTER TABLE `tb_productos` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `tb_productos_AFTER_INSERT` AFTER INSERT ON `tb_productos` FOR EACH ROW BEGIN
+    INSERT INTO tb_actividades (descripcion, fecha_mov, id_user, id_producto)
+    VALUES (CONCAT('Se insertó el producto con ID: ', COALESCE(CAST(NEW.id_producto AS CHAR), 'NULL')), NOW(), 1, NEW.id_producto);
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `tb_productos_AFTER_UPDATE` AFTER UPDATE ON `tb_productos` FOR EACH ROW BEGIN
+    IF OLD.estado_producto <> NEW.estado_producto AND NEW.estado_producto = '0' THEN
+        INSERT INTO tb_actividades (descripcion, fecha_mov, id_user, id_producto)
+        VALUES (CONCAT('Se eliminó el producto con ID: ', COALESCE(CAST(OLD.id_producto AS CHAR), 'NULL')), NOW(), 1, OLD.id_producto);
+    ELSE
+        INSERT INTO tb_actividades (descripcion, fecha_mov, id_user, id_producto)
+        VALUES (
+            CONCAT(
+                'Se editó el producto con ID: ', COALESCE(CAST(OLD.id_producto AS CHAR), 'NULL'), '. '
+            ),
+            NOW(),
+            1,
+            OLD.id_producto
+        );
+    END IF;
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -65,4 +114,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-28  8:58:23
+-- Dump completed on 2025-05-13 17:22:00

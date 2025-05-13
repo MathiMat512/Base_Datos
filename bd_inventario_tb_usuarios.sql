@@ -29,6 +29,7 @@ CREATE TABLE `tb_usuarios` (
   `nombre` varchar(100) DEFAULT NULL,
   `apellido` varchar(100) DEFAULT NULL,
   `id_rol` int DEFAULT NULL,
+  `estado_usuario` int DEFAULT NULL,
   PRIMARY KEY (`id_user`),
   UNIQUE KEY `id_usuario_UNIQUE` (`id_user`),
   KEY `id_rol_idx` (`id_rol`),
@@ -42,7 +43,7 @@ CREATE TABLE `tb_usuarios` (
 
 LOCK TABLES `tb_usuarios` WRITE;
 /*!40000 ALTER TABLE `tb_usuarios` DISABLE KEYS */;
-INSERT INTO `tb_usuarios` VALUES (1,'admin','admin123','Mathias','Bautista',1);
+INSERT INTO `tb_usuarios` VALUES (1,'admin','admin123','Mathias','Bautista',1,1);
 /*!40000 ALTER TABLE `tb_usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-28  8:58:22
+-- Dump completed on 2025-05-13 17:21:59

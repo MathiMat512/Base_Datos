@@ -16,28 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tb_marca`
+-- Table structure for table `tb_transacciones`
 --
 
-DROP TABLE IF EXISTS `tb_marca`;
+DROP TABLE IF EXISTS `tb_transacciones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tb_marca` (
-  `id_marca` int NOT NULL AUTO_INCREMENT,
-  `descripcion_marca` varchar(200) DEFAULT NULL,
-  `estado_marca` int DEFAULT NULL,
-  PRIMARY KEY (`id_marca`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `tb_transacciones` (
+  `id_transaccion` int NOT NULL AUTO_INCREMENT,
+  `id_producto` int NOT NULL,
+  `fecha_movimiento` datetime DEFAULT NULL,
+  `tipo_transaccion` varchar(7) DEFAULT NULL,
+  `cantidad` int DEFAULT NULL,
+  `cantidad_actual` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_transaccion`),
+  KEY `id_producto_idx` (`id_producto`),
+  CONSTRAINT `fk_transacciones_producto` FOREIGN KEY (`id_producto`) REFERENCES `tb_productos` (`id_producto`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tb_marca`
+-- Dumping data for table `tb_transacciones`
 --
 
-LOCK TABLES `tb_marca` WRITE;
-/*!40000 ALTER TABLE `tb_marca` DISABLE KEYS */;
-INSERT INTO `tb_marca` VALUES (1,'HP',1),(2,'Kingston',1),(3,'Gibabyte',1),(4,'Kingston',0),(5,'Epson',1);
-/*!40000 ALTER TABLE `tb_marca` ENABLE KEYS */;
+LOCK TABLES `tb_transacciones` WRITE;
+/*!40000 ALTER TABLE `tb_transacciones` DISABLE KEYS */;
+INSERT INTO `tb_transacciones` VALUES (1,16,'2025-05-19 08:01:58','ENTRADA',4,'5'),(2,16,'2025-05-19 08:08:54','SALIDA',4,'1'),(3,16,'2025-05-19 08:24:24','ENTRADA',4,'5'),(4,16,'2025-05-19 08:25:06','SALIDA',4,'1'),(6,16,'2025-05-19 08:32:11','ENTRADA',1,'2'),(7,16,'2025-05-19 09:18:01','ENTRADA',1,'3'),(8,17,'2025-05-19 09:18:55','ENTRADA',4,'5');
+/*!40000 ALTER TABLE `tb_transacciones` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-19 12:25:15
+-- Dump completed on 2025-05-19 12:25:13

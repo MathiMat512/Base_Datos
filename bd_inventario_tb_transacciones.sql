@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bd_inventario
 -- ------------------------------------------------------
--- Server version	8.0.42
+-- Server version	8.0.41
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -32,7 +32,7 @@ CREATE TABLE `tb_transacciones` (
   PRIMARY KEY (`id_transaccion`),
   KEY `id_producto_idx` (`id_producto`),
   CONSTRAINT `fk_transacciones_producto` FOREIGN KEY (`id_producto`) REFERENCES `tb_productos` (`id_producto`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `tb_transacciones` (
 
 LOCK TABLES `tb_transacciones` WRITE;
 /*!40000 ALTER TABLE `tb_transacciones` DISABLE KEYS */;
-INSERT INTO `tb_transacciones` VALUES (1,16,'2025-05-19 08:01:58','ENTRADA',4,'5'),(2,16,'2025-05-19 08:08:54','SALIDA',4,'1'),(3,16,'2025-05-19 08:24:24','ENTRADA',4,'5'),(4,16,'2025-05-19 08:25:06','SALIDA',4,'1'),(6,16,'2025-05-19 08:32:11','ENTRADA',1,'2'),(7,16,'2025-05-19 09:18:01','ENTRADA',1,'3'),(8,17,'2025-05-19 09:18:55','ENTRADA',4,'5');
+INSERT INTO `tb_transacciones` VALUES (1,16,'2025-05-19 08:01:58','ENTRADA',4,'5'),(2,16,'2025-05-19 08:08:54','SALIDA',4,'1'),(3,16,'2025-05-19 08:24:24','ENTRADA',4,'5'),(4,16,'2025-05-19 08:25:06','SALIDA',4,'1'),(6,16,'2025-05-19 08:32:11','ENTRADA',1,'2'),(7,16,'2025-05-19 09:18:01','ENTRADA',1,'3'),(8,17,'2025-05-19 09:18:55','ENTRADA',4,'5'),(9,5,'2025-05-27 10:37:16','SALIDA',2,'5');
 /*!40000 ALTER TABLE `tb_transacciones` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-19 12:25:13
+-- Dump completed on 2025-05-30 16:24:27

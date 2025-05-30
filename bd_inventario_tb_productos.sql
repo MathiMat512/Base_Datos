@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bd_inventario
 -- ------------------------------------------------------
--- Server version	8.0.42
+-- Server version	8.0.41
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -53,7 +53,7 @@ CREATE TABLE `tb_productos` (
 
 LOCK TABLES `tb_productos` WRITE;
 /*!40000 ALTER TABLE `tb_productos` DISABLE KEYS */;
-INSERT INTO `tb_productos` VALUES (1,'Mouse de Juanca','-','2023-09-15 00:00:00','2023-09-15 00:00:00',1,1,1,1,3,1),(2,'Teclado','-','2025-04-15 00:00:00','2025-04-16 00:00:00',1,2,2,2,1,1),(3,'Cable Jamma','60 cm','2025-05-10 00:00:00','2025-05-13 00:00:00',1,3,2,1,2,1),(4,'Multiconector','20m',NULL,NULL,5,2,1,1,1,1),(5,'Cables USB entrada C','cables',NULL,NULL,7,2,2,1,4,1),(6,'Tinta rosa','60 gramos',NULL,NULL,1,1,1,1,5,0),(11,'Tinta negra','',NULL,NULL,1,5,2,1,6,0),(13,'Tinta negra','',NULL,NULL,1,1,1,1,6,0),(16,'Tinta negraaa','30 gramos',NULL,NULL,3,2,1,2,2,1),(17,'Tinta Amarilla','',NULL,NULL,5,5,2,4,6,1);
+INSERT INTO `tb_productos` VALUES (1,'Mouse de Juanca','-','2023-09-15 00:00:00','2023-09-15 00:00:00',1,1,1,1,3,1),(2,'Teclado','-','2025-04-15 00:00:00','2025-04-16 00:00:00',1,2,2,2,1,1),(3,'Cable Jamma','60 cm','2025-05-10 00:00:00','2025-05-13 00:00:00',1,3,2,1,2,1),(4,'Multiconector','20m',NULL,NULL,5,2,1,1,1,1),(5,'Cables USB entrada C','cables',NULL,NULL,5,2,2,1,4,1),(6,'Tinta rosa','60 gramos',NULL,NULL,1,1,1,1,5,0),(11,'Tinta negra','',NULL,NULL,1,5,2,1,6,0),(13,'Tinta negra','',NULL,NULL,1,1,1,1,6,0),(16,'Tinta negraaa','30 gramos',NULL,NULL,3,2,1,2,2,1),(17,'Tinta Amarilla','',NULL,NULL,5,5,2,4,6,1);
 /*!40000 ALTER TABLE `tb_productos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -164,4 +164,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-19 12:25:14
+-- Dump completed on 2025-05-30 16:24:28

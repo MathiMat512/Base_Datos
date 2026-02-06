@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bd_inventario
 -- ------------------------------------------------------
--- Server version	8.0.41
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `tb_categoria`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tb_categoria` (
   `id_categoria` int NOT NULL AUTO_INCREMENT,
-  `descripcion_categoria` varchar(200) DEFAULT NULL,
+  `descripcion_categoria` varchar(255) DEFAULT NULL,
   `estado_categoria` int DEFAULT NULL,
   PRIMARY KEY (`id_categoria`),
   UNIQUE KEY `id_categoria_UNIQUE` (`id_categoria`)
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-30 16:24:28
+-- Dump completed on 2026-02-06 13:40:15

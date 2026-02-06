@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bd_inventario
 -- ------------------------------------------------------
--- Server version	8.0.41
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,9 +26,9 @@ CREATE TABLE `tb_transacciones` (
   `id_transaccion` int NOT NULL AUTO_INCREMENT,
   `id_producto` int NOT NULL,
   `fecha_movimiento` datetime DEFAULT NULL,
-  `tipo_transaccion` varchar(7) DEFAULT NULL,
+  `tipo_transaccion` varchar(255) DEFAULT NULL,
   `cantidad` int DEFAULT NULL,
-  `cantidad_actual` varchar(45) DEFAULT NULL,
+  `cantidad_actual` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_transaccion`),
   KEY `id_producto_idx` (`id_producto`),
   CONSTRAINT `fk_transacciones_producto` FOREIGN KEY (`id_producto`) REFERENCES `tb_productos` (`id_producto`)
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-30 16:24:27
+-- Dump completed on 2026-02-06 13:40:15

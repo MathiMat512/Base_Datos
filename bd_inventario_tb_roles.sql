@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bd_inventario
 -- ------------------------------------------------------
--- Server version	8.0.41
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -23,11 +23,10 @@ DROP TABLE IF EXISTS `tb_roles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tb_roles` (
-  `id_rol` int NOT NULL AUTO_INCREMENT,
-  `descripcion_rol` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`id_rol`),
-  UNIQUE KEY `id_roles_UNIQUE` (`id_rol`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `id_rol` int NOT NULL,
+  `descripcion_rol` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_rol`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +35,7 @@ CREATE TABLE `tb_roles` (
 
 LOCK TABLES `tb_roles` WRITE;
 /*!40000 ALTER TABLE `tb_roles` DISABLE KEYS */;
-INSERT INTO `tb_roles` VALUES (1,'administrador'),(2,'usuario');
+INSERT INTO `tb_roles` VALUES (1,'ADMINISTRADOR'),(2,'usuario'),(3,'operador'),(4,'auditor');
 /*!40000 ALTER TABLE `tb_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-30 16:24:27
+-- Dump completed on 2026-02-06 13:40:15

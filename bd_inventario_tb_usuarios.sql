@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bd_inventario
 -- ------------------------------------------------------
--- Server version	8.0.41
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -24,17 +24,14 @@ DROP TABLE IF EXISTS `tb_usuarios`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tb_usuarios` (
   `id_user` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(125) NOT NULL,
-  `password` varchar(10) NOT NULL,
-  `nombre` varchar(100) DEFAULT NULL,
-  `apellido` varchar(100) DEFAULT NULL,
-  `id_rol` int DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `nombre` varchar(255) DEFAULT NULL,
+  `apellido` varchar(255) DEFAULT NULL,
   `estado_usuario` int DEFAULT NULL,
   PRIMARY KEY (`id_user`),
-  UNIQUE KEY `id_usuario_UNIQUE` (`id_user`),
-  KEY `id_rol_idx` (`id_rol`),
-  CONSTRAINT `id_rol` FOREIGN KEY (`id_rol`) REFERENCES `tb_roles` (`id_rol`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `id_usuario_UNIQUE` (`id_user`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +40,7 @@ CREATE TABLE `tb_usuarios` (
 
 LOCK TABLES `tb_usuarios` WRITE;
 /*!40000 ALTER TABLE `tb_usuarios` DISABLE KEYS */;
-INSERT INTO `tb_usuarios` VALUES (1,'admin','admin123','Mathias','Bautista',1,1);
+INSERT INTO `tb_usuarios` VALUES (1,'admin','$2a$10$ZBNvhHG5Ys.LiP5OBsiKO.H0gv4b2tHSQSk5VGKY9dOcwm5EXY6Sy','Mathias','Bautista',1),(2,'mathias','mathias123','Mathias','Bautista',1),(3,'prueba','prueba123','Juan','Perez',1),(4,'alejo123','AlejandroSanchez','Alejandro','Sanchez',1);
 /*!40000 ALTER TABLE `tb_usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-30 16:24:27
+-- Dump completed on 2026-02-06 13:40:15

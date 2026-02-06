@@ -16,28 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tb_proveedor`
+-- Table structure for table `tb_usuario_roles`
 --
 
-DROP TABLE IF EXISTS `tb_proveedor`;
+DROP TABLE IF EXISTS `tb_usuario_roles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tb_proveedor` (
-  `id_proveedor` int NOT NULL AUTO_INCREMENT,
-  `descripcion_proveedor` varchar(255) DEFAULT NULL,
-  `estado_proveedor` int DEFAULT NULL,
-  PRIMARY KEY (`id_proveedor`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `tb_usuario_roles` (
+  `id_user` int NOT NULL,
+  `id_rol` int NOT NULL,
+  PRIMARY KEY (`id_user`,`id_rol`),
+  KEY `id_rol` (`id_rol`),
+  CONSTRAINT `tb_usuario_roles_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tb_usuarios` (`id_user`),
+  CONSTRAINT `tb_usuario_roles_ibfk_2` FOREIGN KEY (`id_rol`) REFERENCES `tb_roles` (`id_rol`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tb_proveedor`
+-- Dumping data for table `tb_usuario_roles`
 --
 
-LOCK TABLES `tb_proveedor` WRITE;
-/*!40000 ALTER TABLE `tb_proveedor` DISABLE KEYS */;
-INSERT INTO `tb_proveedor` VALUES (1,'Sercoplus',1),(2,'Impacto',1),(3,'Memory Kings',1),(4,'AliExpress',0),(5,'AliExpresss',NULL),(6,'AliExpress',NULL),(7,'AliExpress',1);
-/*!40000 ALTER TABLE `tb_proveedor` ENABLE KEYS */;
+LOCK TABLES `tb_usuario_roles` WRITE;
+/*!40000 ALTER TABLE `tb_usuario_roles` DISABLE KEYS */;
+INSERT INTO `tb_usuario_roles` VALUES (1,1),(2,1),(2,4);
+/*!40000 ALTER TABLE `tb_usuario_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

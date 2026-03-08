@@ -44,7 +44,7 @@ CREATE TABLE `tb_productos` (
   CONSTRAINT `cod_marca` FOREIGN KEY (`cod_marca`) REFERENCES `tb_marca` (`id_marca`),
   CONSTRAINT `cod_proveedor` FOREIGN KEY (`cod_proveedor`) REFERENCES `tb_proveedor` (`id_proveedor`),
   CONSTRAINT `id_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `tb_categoria` (`id_categoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -53,7 +53,7 @@ CREATE TABLE `tb_productos` (
 
 LOCK TABLES `tb_productos` WRITE;
 /*!40000 ALTER TABLE `tb_productos` DISABLE KEYS */;
-INSERT INTO `tb_productos` VALUES (1,'Mouse de Juanca','-','2023-09-15 00:00:00','2023-09-15 00:00:00',1,1,1,1,3,1),(2,'Teclado','-','2025-04-15 00:00:00','2025-04-16 00:00:00',1,2,2,2,1,1),(3,'Cable Jamma','60 cm','2025-05-10 00:00:00','2025-05-13 00:00:00',1,3,2,1,2,1),(4,'Multiconector','20m',NULL,NULL,5,2,1,1,1,1),(5,'Cables USB entrada C','cables',NULL,NULL,5,2,2,1,4,1),(6,'Tinta rosa','60 gramos',NULL,NULL,1,1,1,1,5,0),(11,'Tinta negra','',NULL,NULL,1,5,2,1,6,0),(13,'Tinta negra','',NULL,NULL,1,1,1,1,6,0),(16,'Tinta negraaa','30 gramos',NULL,NULL,3,2,1,2,2,1),(17,'Tinta Amarilla','',NULL,NULL,5,5,2,4,6,1),(18,'Mouse LogitechG305','-','2023-09-15 00:00:00','2023-09-15 00:00:00',1,NULL,NULL,NULL,NULL,1),(19,'Mouse LogitechG305','-','2023-09-15 00:00:00','2023-09-15 00:00:00',1,NULL,NULL,NULL,NULL,1),(20,'Mouse LogitechG305','-','2023-09-15 00:00:00','2023-09-15 00:00:00',1,NULL,NULL,NULL,NULL,1),(21,'Mouse LogitechG305','9','2023-09-15 00:00:00','2023-09-15 00:00:00',1,NULL,NULL,NULL,NULL,1),(22,'Mouse LogitechG305','9','2023-09-15 00:00:00','2023-09-15 00:00:00',1,1,1,1,3,1);
+INSERT INTO `tb_productos` VALUES (1,'Mouse de Juanca','-','2023-09-15 00:00:00','2023-09-15 00:00:00',1,1,1,1,3,0),(2,'Teclado','-','2025-04-15 00:00:00','2025-04-16 00:00:00',1,2,2,2,1,0),(3,'Cable Jamma','60 cm','2025-05-10 00:00:00','2025-05-13 00:00:00',1,3,2,1,2,0),(4,'Multiconector','20m',NULL,NULL,5,2,1,1,1,0),(5,'Cables USB entrada C','cables',NULL,NULL,5,2,2,1,4,0),(6,'Tinta rosa','60 gramos',NULL,NULL,1,1,1,1,5,0),(11,'Tinta negra','',NULL,NULL,1,5,2,1,6,0),(13,'Tinta negra','',NULL,NULL,1,1,1,1,6,0),(16,'Tinta negraaa','30 gramos',NULL,NULL,3,2,1,2,2,0),(17,'Tinta Amarilla','',NULL,NULL,5,5,2,4,6,0),(18,'Mouse LogitechG305','-','2023-09-15 00:00:00','2023-09-15 00:00:00',1,NULL,NULL,NULL,NULL,1),(19,'Mouse LogitechG305','-','2023-09-15 00:00:00','2023-09-15 00:00:00',1,NULL,NULL,NULL,NULL,1),(20,'Mouse LogitechG305','-','2023-09-15 00:00:00','2023-09-15 00:00:00',1,NULL,NULL,NULL,NULL,1),(21,'Mouse LogitechG305','9','2023-09-15 00:00:00','2023-09-15 00:00:00',1,NULL,NULL,NULL,NULL,1),(22,'Mouse LogitechG305','9','2023-09-15 00:00:00','2023-09-15 00:00:00',1,1,1,1,3,0),(23,'USB','-',NULL,NULL,10,2,1,1,7,1),(24,'Maquillaje chino','12',NULL,NULL,15,7,7,5,8,1);
 /*!40000 ALTER TABLE `tb_productos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -66,4 +66,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-02-06 13:40:15
+-- Dump completed on 2026-03-08 16:08:45

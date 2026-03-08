@@ -40,7 +40,7 @@ CREATE TABLE `tb_usuarios` (
 
 LOCK TABLES `tb_usuarios` WRITE;
 /*!40000 ALTER TABLE `tb_usuarios` DISABLE KEYS */;
-INSERT INTO `tb_usuarios` VALUES (1,'admin','$2a$10$ZBNvhHG5Ys.LiP5OBsiKO.H0gv4b2tHSQSk5VGKY9dOcwm5EXY6Sy','Mathias','Bautista',1),(2,'mathias','mathias123','Mathias','Bautista',1),(3,'prueba','prueba123','Juan','Perez',1),(4,'alejo123','AlejandroSanchez','Alejandro','Sanchez',1);
+INSERT INTO `tb_usuarios` VALUES (1,'admin','$2a$10$BZfcc2tXMruYzWlw91BClOkUhdbxkK0KOV0sU4XwjkEky/eS9Rcby','Mathias','Bautista',1),(2,'mathias','$2a$10$szZb1e8ujsLZKBIDpEBhFOt82Ap0yzJJeV9xkcXRSTVcr6TsTU5ZO','Mathias','Bautista',1),(3,'prueba','$2a$10$Q8eUZlSB28RDQ.OUC3603eQ1MUf1ucyF.flaieg3q5VQbA4zr6.uW','Juan','Perez',1),(4,'alejo123','$2a$10$MyWEJY0uRKSKoCY./SqSUeUrpAgfuBsI5ah35YFlzt2xMiOKgQGqK','Alejandro','Sanchez',1);
 /*!40000 ALTER TABLE `tb_usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-02-06 13:40:15
+-- Dump completed on 2026-03-08 16:08:45

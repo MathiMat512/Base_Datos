@@ -27,7 +27,7 @@ CREATE TABLE `tb_marca` (
   `descripcion_marca` varchar(255) DEFAULT NULL,
   `estado_marca` int DEFAULT NULL,
   PRIMARY KEY (`id_marca`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `tb_marca` (
 
 LOCK TABLES `tb_marca` WRITE;
 /*!40000 ALTER TABLE `tb_marca` DISABLE KEYS */;
-INSERT INTO `tb_marca` VALUES (1,'HP',1),(2,'Kingston',1),(3,'Gibabyte',1),(4,'Kingston',0),(5,'Epson',1),(6,'Nike',1),(7,'Rebook',1);
+INSERT INTO `tb_marca` VALUES (1,'HP',1),(2,'Kingston',1),(3,'Gibabyte',1),(4,'Kingston',0),(5,'Epson',1),(6,'Nike',1),(7,'Rebook',0),(8,NULL,NULL),(9,'Alicorp',1),(10,'sfsdsdf',0),(11,'sfdsdf11111111',0);
 /*!40000 ALTER TABLE `tb_marca` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-08 16:08:45
+-- Dump completed on 2026-03-25 23:53:20

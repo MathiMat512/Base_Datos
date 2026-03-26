@@ -27,7 +27,7 @@ CREATE TABLE `tb_area` (
   `descripcion_area` varchar(255) DEFAULT NULL,
   `estado_area` int DEFAULT NULL,
   PRIMARY KEY (`id_area`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `tb_area` (
 
 LOCK TABLES `tb_area` WRITE;
 /*!40000 ALTER TABLE `tb_area` DISABLE KEYS */;
-INSERT INTO `tb_area` VALUES (1,'Sistemas',1),(2,'Ventas',1),(3,'Contaduria',1),(4,'Tintoreria',1),(5,'Comercio',1);
+INSERT INTO `tb_area` VALUES (1,'Sistemas',1),(2,'Ventas',1),(3,'Contaduria',1),(4,'Tintoreria',0),(5,'Comercio',0),(6,'Finanzas III',0),(7,'Finanzas VI',0),(8,'Miraflores',1),(9,'sdfsdfsdfsd',0),(10,'fsdfsdfsdfsdfsdf',0);
 /*!40000 ALTER TABLE `tb_area` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-08 16:08:46
+-- Dump completed on 2026-03-25 23:53:20

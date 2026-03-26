@@ -27,7 +27,7 @@ CREATE TABLE `tb_proveedor` (
   `descripcion_proveedor` varchar(255) DEFAULT NULL,
   `estado_proveedor` int DEFAULT NULL,
   PRIMARY KEY (`id_proveedor`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `tb_proveedor` (
 
 LOCK TABLES `tb_proveedor` WRITE;
 /*!40000 ALTER TABLE `tb_proveedor` DISABLE KEYS */;
-INSERT INTO `tb_proveedor` VALUES (1,'Sercoplus',1),(2,'Impacto',1),(3,'Memory Kings',1),(4,'AliExpress',0),(5,'AliExpresss',NULL),(6,'AliExpress',NULL),(7,'AliExpress',1);
+INSERT INTO `tb_proveedor` VALUES (1,'Sercoplus',1),(2,'Impacto',1),(3,'Memory Kings',1),(4,'AliExpress',0),(5,'AliExpresss',NULL),(6,'AliExpress',NULL),(7,'AliExpress',0),(8,'CYC Computer',0),(9,'dsfsfsdfffffffff',0),(10,'sdfsfsdf34534534',0);
 /*!40000 ALTER TABLE `tb_proveedor` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-08 16:08:45
+-- Dump completed on 2026-03-25 23:53:19

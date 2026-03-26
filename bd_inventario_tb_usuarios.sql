@@ -31,7 +31,7 @@ CREATE TABLE `tb_usuarios` (
   `estado_usuario` int DEFAULT NULL,
   PRIMARY KEY (`id_user`),
   UNIQUE KEY `id_usuario_UNIQUE` (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `tb_usuarios` (
 
 LOCK TABLES `tb_usuarios` WRITE;
 /*!40000 ALTER TABLE `tb_usuarios` DISABLE KEYS */;
-INSERT INTO `tb_usuarios` VALUES (1,'admin','$2a$10$BZfcc2tXMruYzWlw91BClOkUhdbxkK0KOV0sU4XwjkEky/eS9Rcby','Mathias','Bautista',1),(2,'mathias','$2a$10$szZb1e8ujsLZKBIDpEBhFOt82Ap0yzJJeV9xkcXRSTVcr6TsTU5ZO','Mathias','Bautista',1),(3,'prueba','$2a$10$Q8eUZlSB28RDQ.OUC3603eQ1MUf1ucyF.flaieg3q5VQbA4zr6.uW','Juan','Perez',1),(4,'alejo123','$2a$10$MyWEJY0uRKSKoCY./SqSUeUrpAgfuBsI5ah35YFlzt2xMiOKgQGqK','Alejandro','Sanchez',1);
+INSERT INTO `tb_usuarios` VALUES (1,'admin','$2a$10$lRaVIws3CF59aJVtTtIY8u1OhPYKrzWC6d4fPjxOfAE7nJG/QG2Fi','Mathias','Bautista',1),(2,'mathias','$2a$10$BxfZ74mflZnNKvcEhXopGeUdWB7OAy02lxcR28YexWcRFAOi8FE3O','Mathias','Bautista',1),(3,'prueba','$2a$10$oTfedlzHYE6h3ErRoIu9xeXePUTCSGBdjxWUW8yflfI.PuetKkycu','Juan','Perez',1),(4,'alejandro','$2a$10$ADD7IK7VZ.I6VE8ER28ycOK7fykuyW0TAK8/auVc4zwmuzQLsxWVm','Alejandro','Sanchez',1),(5,'test','$2a$10$lr1NLfOpDDRSc5rvfn52NuTltgNMSHyajc.ktjt.R3nXogY413Imu','Carlos','Gomez',0),(9,'carlos','$2a$10$By8Pj.TDfbe.DtOKxeFak.smpxXBKibLyOoSsMCrgDesu8eoWjcvu','Carlos','Gomez',1),(11,'mbautista','$2a$10$O8M16pSIG9OMtxun8niNhOf3hKUnDqjwgxnt32Zyh0W5uXxySFInS','Mathias','Bautista',0);
 /*!40000 ALTER TABLE `tb_usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-08 16:08:45
+-- Dump completed on 2026-03-25 23:53:20

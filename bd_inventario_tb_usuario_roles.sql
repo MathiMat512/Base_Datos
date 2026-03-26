@@ -38,7 +38,7 @@ CREATE TABLE `tb_usuario_roles` (
 
 LOCK TABLES `tb_usuario_roles` WRITE;
 /*!40000 ALTER TABLE `tb_usuario_roles` DISABLE KEYS */;
-INSERT INTO `tb_usuario_roles` VALUES (1,1),(2,4);
+INSERT INTO `tb_usuario_roles` VALUES (1,1),(2,2),(3,3),(4,4),(9,4);
 /*!40000 ALTER TABLE `tb_usuario_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-08 16:08:45
+-- Dump completed on 2026-03-25 23:53:19
